@@ -3,12 +3,13 @@ document.querySelectorAll('.botao').forEach(btn => {
 
         document.querySelectorAll('.aba-conteudo').forEach(tab => {
             tab.classList.remove('ativo');
-        // document.querySelectorAll('.botao').forEach(tab =>{
-        //         tab.classList.remove('ativo');
+            // document.querySelectorAll('.botao').forEach(tab => {
+            //           tab.classList.remove('ativo');   
         });
-        const index = Array.from(document.querySelectorAll('.botao')).concat
-        document.querySelectorAll('.aba-conteudo')[index].classList.add
-        document.querySelectorAll('.botaoa')[index].classList.add('ativo');
+        const index = Array.from(document.querySelectorAll('.botao')).indexOf(this);
+        document.querySelectorAll('.aba-conteudo')[index].classList.add('ativo');
+        document.querySelectorAll('.botao')[index].classList.add('ativo');
+
     });
 });
 
@@ -19,3 +20,7 @@ for(let i=0;i <botoes.length;i++){
             botoes[j].classList.remove('ativo'); }
         botoes[i].classList.add('ativo');}
         }
+const contadores = document.querySelectorAll(".contador");
+const tempoObjetivo1 = new Date("2024-10-05T00:00:00");
+let tempoatual = new Date();
+contadores[0].textContent = tempoObjetivo1- tempoatual;
